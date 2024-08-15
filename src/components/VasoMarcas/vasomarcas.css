@@ -1,0 +1,92 @@
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; 
+  padding: 20px;
+}
+
+.vaso-2l {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  width: 200px;
+  height: 400px;
+  border: 2px solid #000;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+  
+.agua {
+  width: 100%;
+  height: 0;
+  background: rgba(0, 128, 255, 0.7);
+  transition: height 1s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+  
+
+.medidas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  
+.medida {  
+  padding: 0 10px;
+  font-size: 12px;
+  color: #333;
+}
+  
+.medida::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+}
+
+.botones{
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.vaciar, .rellenar {
+  padding: 10px 20px;
+  width: 200px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+  
+.vaciar:hover, .rellenar:hover {
+  background-color: #0056b3;
+}
+  
+.lleno {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffeb3b;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+  
